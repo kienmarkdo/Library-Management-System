@@ -14,7 +14,7 @@ This is a project that I have been meaning to do for a while. Out of the thousan
 - Private documentation (JavaDocs)
 - Software developement
 
-This project is perfect for me since I am learning OOP and Data Structures in my spare time in addition to the course *ITI 1520 - Intro to Computing II/Intro à l'informatique* in which I am enrolled.
+This project is perfect for me since I am learning OOP and Data Structures in my spare time in addition to the course *ITI 1520 - Intro to Computing II/Intro à l'informatique II* in which I am enrolled.
 
 ### Flexibility and Expandability
 A Library Management System is also highly flexible for modifications. I can add on new features as I continue to learn new concepts such as:
