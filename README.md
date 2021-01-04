@@ -31,7 +31,7 @@ Some of the concepts I used for this project includes:
 - Software developement
 
 ### Flexibility and Expandability
-A Library Management System is also highly flexible for modifications. I can add on new features as I continue to learn new concepts such as:
+A Library Management System as a personal project highly flexible for modifications. I can add on new features as I continue to learn new concepts such as:
 - A GUI for a more user-friendly experience
 - Web developement (publishing my program online so that it can be used by anyone)
 - Database (SQL, mySQL)
