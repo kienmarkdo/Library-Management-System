@@ -1,7 +1,6 @@
 /**
  * @author    Kien Do
  * @version   1.0
- * @lastEdit  2021-01-01
  */
 
 abstract public class User {
