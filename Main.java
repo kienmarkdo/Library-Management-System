@@ -3,8 +3,6 @@
  *
  * @author    Kien Do
  * @version   1.0
- * @lastEdit  2021-01-01
- * @created   2021-01-01
  *
  * Relevant Classes
  * - Library.java
