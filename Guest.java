@@ -1,6 +1,10 @@
 /**
+ * User.java -> Guest.java
+ * A guest is a subclass of User therefore a guest has login credentials (username, password).
+ * Guest.java represents the data and actions that are pertinent to a regular library user.
+ * For example, a guest can borrow and return books from the library.
+ *
  * @author    Kien Do
- * @version   1.0
  */
 
 import java.util.ArrayList;

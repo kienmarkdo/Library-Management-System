@@ -1,6 +1,7 @@
 /**
+ * User.java represents the general data for a user to log in to the library system
+ *
  * @author    Kien Do
- * @version   1.0
  */
 
 abstract public class User {

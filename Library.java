@@ -1,6 +1,8 @@
 /**
+ * Library.java represents a library which contains data on books, login credentials, as well as
+ * library actions such as adding a book into the library or taking a book out of the library.
+ *
  * @author    Kien Do
- * @version   1.0
  */
 
 import java.util.ArrayList;

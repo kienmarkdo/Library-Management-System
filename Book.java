@@ -1,6 +1,7 @@
 /**
+ * Book.java is a class that represents a book stored in the library
+ *
  * @author    Kien Do
- * @version   1.0
  */
 public class Book {
     private String title;
@@ -13,10 +14,10 @@ public class Book {
         owner = null;
     }
 
-    public Book(String t, String a, String g, Guest o) {
-        title = t;
-        author = a;
-        owner = o;
+    public Book(String _title, String _author, Guest _owner) {
+        title = _title;
+        author = _author;
+        owner = _owner;
     }
 
     public void displayBook() {
@@ -37,16 +38,16 @@ public class Book {
         return owner;
     }
 
-    public void setTitle(String t) {
-        title = t;
+    public void setTitle(String _title) {
+        title = _title;
     }
 
-    public void setAuthor(String a) {
-        author = a;
+    public void setAuthor(String _author) {
+        author = _author;
     }
 
-    public void setOwner(Guest o) {
-        owner = o;
+    public void setOwner(Guest _owner) {
+        owner = _owner;
     }
 
 }
