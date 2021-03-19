@@ -26,10 +26,11 @@ public class Guest extends User {
         booksBorrowing.add(newBook);
     }
 
+    /**
+     * Removes a book from a library by... index? name? author? To be determined
+     */
     public void removeBook(Book _book) {
-        /**
-         * Removes a book from a library by... index? name? author? To be determined
-         */
+
         booksBorrowing.remove(_book);
     }
 

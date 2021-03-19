@@ -1,5 +1,5 @@
 /**
- * User.java represents the general data for a user to log in to the library system
+ * User.java is an abstract class that represents the general data for a user to log in to the library system
  *
  * @author    Kien Do
  */

@@ -10,7 +10,7 @@ import java.lang.*;
  *
  * Relevant Classes
  * - Library.java
- * - User.java (abstraction)
+ * - User.java (abstract)
  * - Guest.java (extends User)
  * - Administrator.java (extends User)
  */
