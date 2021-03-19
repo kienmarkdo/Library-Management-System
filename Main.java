@@ -120,13 +120,47 @@ public class Main {
             e.printStackTrace();
         }
 
-        if (isValid)
-            System.out.println("SUCCESS: Username and password found in the system.");
-        else
-            System.out.println("ERROR: Username and password not found in the system.");
+//        if (isValid)
+//            System.out.println("SUCCESS: Username and password found in the system.");
+//        else
+//            System.out.println("ERROR: Username and password not found in the system.");
 
         return isValid;
-    }
+    } // end of verifyUsernameAndPassword
+
+    /**
+     * Checks whether a username exists in a given file or not.
+     * @param fileName
+     * Name of the file containing username data
+     * @param username
+     * Name of the username being checked
+     * @return isExist
+     * True if the username already exists. Else, false.
+     */
+    static boolean verifyUsername(String fileName, String username) {
+        boolean isExist = false;
+
+        try {
+            File f = new File(fileName);
+            Scanner read = new Scanner(f);
+            while (read.hasNextLine()) {
+                String userData = read.nextLine();
+                String[] temp = userData.split(" ");
+                if(username.equals(temp[0])) {
+                    isExist = true;
+                    break;
+                }
+            }
+            read.close();
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("ERROR: File not found. Cannot verify username.");
+            e.printStackTrace();
+        }
+
+        return isExist;
+
+    } // end of verifyUsername
 
     /********************************
      * Menu methods
@@ -280,7 +314,7 @@ public class Main {
         String newUsername = null;
         String newPassword = null;
 
-        while(menuOption == null && !endProgram) {
+        while(menuOption == null || !endProgram) {
             System.out.println("Select the type of account for which you would like to register");
             System.out.println("1. Administrator / Librarian");
             System.out.println("2. Guest");
@@ -306,13 +340,29 @@ public class Main {
             switch (menuOption) {
                 case "1" -> {
                     Administrator newAdmin = new Administrator(newUsername, newPassword);
-                    createFile(ADMINCREDENTIALSFILENAME);
-                    writeToFile(ADMINCREDENTIALSFILENAME, newUsername + " " + newPassword);
+                    if (!verifyUsername(ADMINCREDENTIALSFILENAME, newUsername)) {
+                        createFile(ADMINCREDENTIALSFILENAME);
+                        writeToFile(ADMINCREDENTIALSFILENAME, newUsername + " " + newPassword);
+
+                        System.out.println("Registration successful!");
+                        endProgram = true;
+                    } else {
+                        System.out.println("ERROR: This username already exists.");
+                        pressAnyKeyToContinue();
+                    }
                 }
                 case "2" -> {
                     Guest newGuest = new Guest(newUsername, newPassword);
-                    createFile(GUESTCREDENTIALSFILENAME);
-                    writeToFile(GUESTCREDENTIALSFILENAME, newUsername + " " + newPassword);
+                    if (!verifyUsername(GUESTCREDENTIALSFILENAME, newUsername)) {
+                        createFile(GUESTCREDENTIALSFILENAME);
+                        writeToFile(GUESTCREDENTIALSFILENAME, newUsername + " " + newPassword);
+
+                        System.out.println("Registration successful!");
+                        endProgram = true;
+                    } else {
+                        System.out.println("ERROR: This username already exists.");
+                        pressAnyKeyToContinue();
+                    }
                 }
                 case "0" -> {
                     System.out.println("Exiting current menu . . .");
